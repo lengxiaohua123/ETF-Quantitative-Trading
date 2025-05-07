@@ -1,4 +1,3 @@
-# 全局配置文件
 data_sources:
   main: tushare
   backup: [yahoo_finance, eastmoney]

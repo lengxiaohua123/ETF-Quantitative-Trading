@@ -6,12 +6,12 @@ def main():
     parser.add_argument('--mode', choices=['api', 'cli'], default='cli', help='启动方式')
     args = parser.parse_args()
     if args.mode == 'api':
-        # 启动API服务（例如使用FastAPI或Flask，未实现）
-        print("API模式启动（待实现）")
+        print("API模式启动（可扩展FastAPI/Flask等）")
     else:
-        # CLI模式示例
-        print("CLI工具启动")
-        # 可扩展CLI命令
+        print("CLI模式启动")
+        # 示例：命令行数据获取
+        df = data_api.fetch_daily('000001.SZ', '20240101', '20240501')
+        print(df.head())
 
 if __name__ == "__main__":
     main()
