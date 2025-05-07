@@ -1,0 +1,23 @@
+# 全局配置文件
+data_sources:
+  main: tushare
+  backup: [yahoo_finance, eastmoney]
+  tushare:
+    token: "YOUR_TUSHARE_TOKEN"
+  yahoo_finance:
+    api_key: ""
+  eastmoney:
+    api_key: ""
+
+proxy:
+  enable: true
+  pool: ["http://127.0.0.1:7890"]
+
+backtest:
+  initial_cash: 1000000
+  commission_rate: 0.001
+  slippage: 0.0005
+
+database:
+  type: sqlite
+  path: "./data/datasets/quant.db"
